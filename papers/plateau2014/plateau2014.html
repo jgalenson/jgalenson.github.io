@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Research.js: Evaluating Research Tool Usability on the Web</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <!--<link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">-->
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.01.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <!-- http://imakewebthings.com/deck.js/introduction/ -->
+
+    <!--
+	http://pex4fun.com/
+	https://github.com/kripken/emscripten/wiki/Porting-Examples-and-Demos
+	https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
+      -->
+
+    <section class="slide">
+      <h2>Research.js: Evaluating Research Tool Usability on the Web</h2><br/>
+      <h3><u><a href="mailto:joel@cs.berkeley.edu">Joel Galenson</a></u>, Cindy Rubio-González, Sarah Chasins, Liang Gong</h3>
+      <h4>UC Berkeley</h4>
+    </section>
+
+    <section class="slide">
+      <h2>Motivation</h2>
+      <ul>
+	<li>Online demos</li>
+	<ul>
+	  <li class="slide">attract users</li>
+	  <li class="slide">generate data</li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Motivation</h2>
+      <ul>
+	<li><a href="http://www.rise4fun.com/">rise4fun</a> [<a href="http://research.microsoft.com/apps/pubs/default.aspx?id=192329">Ball et al 2013</a>]</li>
+	<li class="slide">
+	   <iframe allowtransparency="true" frameborder="0" style="width:1000px;height:730px" src="http://www.rise4fun.com/z3?frame=1&menu=0"> </iframe>
+	   </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Motivation</h2>
+      <ul>
+	<li><a href="https://www.touchdevelop.com/">TouchDevelop</a> [<a href="http://research.microsoft.com/apps/pubs/default.aspx?id=229038">Ball et al 2014</a>]</li>
+	<!--<li class="slide"> <img src="plateau2014-touchdevelop.png"/></li>-->
+	<li class="slide">See Figure 9.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Motivation</h2>
+      <ul>
+	<li><a href="http://jsnice.org/">JSNice</a> [Raychev et al]</li>
+	<li class="slide">
+	  <iframe allowtransparency="true" frameborder="0" style="width:1000px;height:730px" src="http://jsnice.org/"> </iframe>
+	</li>
+	<li class="slide">Featured on Slashdot, reddit, Hacker News, ...</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Approaches</h2>
+      <ul>
+	<li>Run web server</li>
+	<ul>
+	  <li class="slide">Cost, load, security</li>
+	</ul>
+	<li class="slide">VM image</li>
+	<ul>
+	  <li class="slide">Hard to attract interest</li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Emscripten</h2>
+      <ul>
+	<li>LLVM to JavaScript compiler</li>
+	<li class="slide"><iframe style="width:800px;height:730px"  src="http://www.youtube.com/embed/c2uNDlP4RiE" frameborder="0" allowfullscreen></iframe></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Our approach</h2>
+      <ul>
+	<li>Compile code to JavaScript and put on the web</li>
+	<ul>
+	  <li class="slide"><del>Cost, load, security</del></li>
+	  <li class="slide"><del>Hard to attract interest</del></li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Emscripten</h2>
+      <ul>
+	<li class="slide"><iframe src="http://kripken.github.io/lua.vm.js/repl.html" width="90%" height="800"></iframe></li>
+	<li class="slide"><a href="https://github.com/kripken/emscripten/wiki/Porting-Examples-and-Demos">And many more tools!</a></li>
+	<li class="slide"><a href="http://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS">And many more languages!</a></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>MiniSat demo</h2>
+      <iframe src="http://jgalenson.github.io/research.js/demos/minisat.html" width="90%" height="800"></iframe>
+      </iframe>
+    </section>
+
+    <section class="slide">
+      <h2>Boolector demo</h2>
+      <iframe src="http://jgalenson.github.io/research.js/demos/boolector.html" width="90%" height="800"></iframe>
+      </iframe>
+    </section>
+
+    <section class="slide">
+      <h2>Hugs demo</h2>
+      <iframe src="http://jgalenson.github.io/research.js/demos/hugs.html" width="90%" height="800"></iframe>
+      </iframe>
+    </section>
+
+    <section class="slide">
+      <h2>Results</h2>
+      <ul>
+	<li>MiniSat, Lingeling, Boolector, Hugs</li>
+	<ul>
+	  <li class="slide">Performance: 2.4 - 5.5x slower</li>
+	  <li class="slide">Binary size: < 3x larger</li>
+	  <li class="slide">At most one code and one build line changed</li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Challenges</h2>
+      <ul>
+	<li>Closed source binaries</li>
+	<ul>
+	  <li class="slide">Compile assembly to JS?</li>
+	</ul>
+	<li class="slide">Performance</li>
+	<ul>
+	  <li class="slide">Less useful for performance-focused projects</li>
+	  <li class="slide">Emscripten and browsers are improving rapidly</li>
+	</ul>
+	<li class="slide">Difficulty</li>
+	<ul>
+	  <li class="slide">Can be tricky to compile</li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Challenges: Z3</h2>
+      <ul>
+	<li>&#8707; x, y. x = y</li>
+	<ul>
+	  <li class="slide">SAT</li>
+	</ul>
+	<li class="slide">&#8707; x, y. x > y &and; x = 42</li>
+	<ul>
+	  <li class="slide">
+	    if (typeof e !== 'number' && e !== 'longjmp') throw e;<br/>
+	    RangeError: Maximum call stack size exceeded
+	  </li>
+	</ul>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Thanks!</h2><br/>
+      <ul>
+	<li><a href="http://jgalenson.github.io/research.js/">http://jgalenson.github.io/research.js/</a></li>
+	<li>Questions?</li>
+      </ul>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <!--
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    -->
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<!--<script src="extensions/goto/deck.goto.js"></script>-->
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
